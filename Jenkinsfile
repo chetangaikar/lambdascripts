@@ -20,6 +20,7 @@ pipeline {
                   do
                     if [ $fileName = "Jenkinsfile" ]
                     then continue
+                      echo "\n\nChanges are to Jenkinsfile therefore skipping the other deployments.\n\n"
                     fi
                     for functionName in $functionList
                       do
